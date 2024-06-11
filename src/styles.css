@@ -1,3 +1,77 @@
-button {
-    background-color: red;
+/* TODO: Investigate edge of image not blurring */
+/* TODO: Add font */
+
+:root {
+    --cutting-board-image: url(./images/cutting_board.jpg)
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    
+    padding: 20px;
+}
+
+header .title {
+    flex: 1;
+
+    font-size: 2rem;
+}
+
+header nav button {
+    border: none;
+    background-color: inherit;
+    font-size: 1rem;
+}
+
+#content {
+    flex: 1;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.home-container {
+    flex: 1;
+
+    display: flex;
+    flex-direction: column;
+    
+    background-image: var(--cutting-board-image);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.home-container .text-content {
+    flex: 1;
+
+    display: flex;
+    flex-direction: column;
+    backdrop-filter: blur(10px);
+}
+
+.home-container .text-content .name {
+    flex: 1;
+
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+
+    font-size: 5rem;
+}
+
+.home-container .description {
+    flex: 1;
+
+    text-align: center;
+    font-size: 2rem;
 }
