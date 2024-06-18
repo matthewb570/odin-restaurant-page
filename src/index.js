@@ -1,4 +1,4 @@
-import homepage from './home.js';
+import homePage from './home.js';
 import aboutPage from './about.js';
 import './styles.css';
 
@@ -10,7 +10,7 @@ const navigationEvents = new function() {
     
     const loadHomePage = () => {
         clearPage();
-        homepage.create(divContent);
+        homePage.create(divContent);
     }
 
     const loadAboutPage = () => {

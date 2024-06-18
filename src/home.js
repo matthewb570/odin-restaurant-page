@@ -1,4 +1,4 @@
-const homepage = new function() {
+const homePage = new function() {
 
     const create = (parentContainer) => {
         parentContainer.appendChild(createHomeContainer());
@@ -40,4 +40,4 @@ const homepage = new function() {
     return { create };
 }
 
-export default homepage;
+export default homePage;
