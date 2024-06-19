@@ -4,6 +4,7 @@
     --cutting-board-image: url(./images/cutting_board.jpg);
 
     --standard-box-shadow: rgb(156, 156, 156) 1px 1px 5px;
+    --accent-background-color: rgb(225, 225, 225);
 }
 
 body {
@@ -98,6 +99,10 @@ header nav button {
     margin-bottom: 50px;
 }
 
+#menu-container .page-section {
+    padding: 20px;
+}
+
 #about-container .section-header,
 #menu-container .section-header {
     font-size: 2rem;
@@ -113,6 +118,11 @@ header nav button {
     padding: 0px 20px 20px 20px;
 }
 
+#menu-container .page-section:nth-of-type(2n) {
+    background-color: var(--accent-background-color);
+    border-radius: 10px;
+}
+
 .card-list {
     display: flex;
     gap: 20px;
@@ -123,6 +133,7 @@ header nav button {
     width: 400px;
     border-radius: 10px;
     padding-bottom: 20px;
+    background-color: white;
 }
 
 .card-image {
