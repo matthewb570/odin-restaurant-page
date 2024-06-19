@@ -1,7 +1,7 @@
 @import url(https://fonts.bunny.net/css?family=roboto:400,400i,700);
 
 :root {
-    --cutting-board-image: url(./images/cutting_board.jpg);
+    --cutting-board-image: url(../images/cutting_board.jpg);
 
     --standard-box-shadow: rgb(156, 156, 156) 1px 1px 5px;
     --accent-background-color: rgb(225, 225, 225);

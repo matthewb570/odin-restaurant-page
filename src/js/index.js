@@ -1,7 +1,7 @@
 import homePage from './home.js';
 import menuPage from './menu.js';
 import aboutPage from './about.js';
-import './styles.css';
+import '../css/styles.css';
 
 const divContent = document.querySelector('#content');
 const btnHome = document.querySelector('#btn-home');

@@ -1,10 +1,10 @@
-import onionRings from './images/onion_rings.jpg';
-import cheeseburger from './images/cheeseburger.jpg';
-import pizza from './images/pizza.jpg';
-import cookies from './images/cookies.jpg';
-import iceCream from './images/ice_cream.jpg';
-import water from './images/water.jpg';
-import lemonade from './images/lemonade.jpg';
+import onionRings from '../images/onion_rings.jpg';
+import cheeseburger from '../images/cheeseburger.jpg';
+import pizza from '../images/pizza.jpg';
+import cookies from '../images/cookies.jpg';
+import iceCream from '../images/ice_cream.jpg';
+import water from '../images/water.jpg';
+import lemonade from '../images/lemonade.jpg';
 
 const menuPage = new function() {
 
