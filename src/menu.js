@@ -1,4 +1,6 @@
 import onionRings from './images/onion_rings.jpg';
+import cheeseburger from './images/cheeseburger.jpg';
+import pizza from './images/pizza.jpg';
 
 const menuPage = new function() {
 
@@ -11,6 +13,7 @@ const menuPage = new function() {
         divMenuContainer.id = 'menu-container';
         divMenuContainer.appendChild(createPageHeader());
         divMenuContainer.appendChild(createAppetizerSection());
+        divMenuContainer.appendChild(createEntreeSection());
 
         return divMenuContainer;
     }
@@ -33,7 +36,12 @@ const menuPage = new function() {
     }
 
     const createEntreeSection = () => {
+        const divEntreeSection = document.createElement('div');
+        divEntreeSection.classList.add('page-section');
+        divEntreeSection.appendChild(createSectionHeader('Entrees'));
+        divEntreeSection.appendChild(createEntreeCardList());
 
+        return divEntreeSection;
     }
 
     const createDessertSection = () => {
@@ -47,8 +55,8 @@ const menuPage = new function() {
     const createAppetizerCardList = () => {
         const divAppetizerCardList = document.createElement('div');
         divAppetizerCardList.classList.add('card-list');
-        divAppetizerCardList.appendChild(createCard('Onion Rings', 'The classic, deep-fried favorite.', onionRings, '$5.00'));
-        divAppetizerCardList.appendChild(createCard('Onion Rings', 'The classic, deep-fried favorite.', onionRings, '$5.00'));
+        divAppetizerCardList.appendChild(createCard('Onion Rings', 'The classic, deep-fried favorite.', onionRings, '$5.99'));
+        divAppetizerCardList.appendChild(createCard('Onion Rings', 'The classic, deep-fried favorite.', onionRings, '$5.99'));
 
         return divAppetizerCardList;
     }
@@ -62,7 +70,12 @@ const menuPage = new function() {
     }
 
     const createEntreeCardList = () => {
+        const divEntreeCardList = document.createElement('div');
+        divEntreeCardList.classList.add('card-list');
+        divEntreeCardList.appendChild(createCard('Cheeseburger', 'A classic burger with all the fixings.', cheeseburger, '$9.99'));
+        divEntreeCardList.appendChild(createCard('Pizza', 'A cheese pizza baked in a food fired oven.', pizza, '$11.99'))
         
+        return divEntreeCardList;
     }
 
     const createDessertCardList = () => {
