@@ -1,6 +1,8 @@
 import onionRings from './images/onion_rings.jpg';
 import cheeseburger from './images/cheeseburger.jpg';
 import pizza from './images/pizza.jpg';
+import cookies from './images/cookies.jpg';
+import iceCream from './images/ice_cream.jpg';
 
 const menuPage = new function() {
 
@@ -14,6 +16,7 @@ const menuPage = new function() {
         divMenuContainer.appendChild(createPageHeader());
         divMenuContainer.appendChild(createAppetizerSection());
         divMenuContainer.appendChild(createEntreeSection());
+        divMenuContainer.appendChild(createDessertSection());
 
         return divMenuContainer;
     }
@@ -45,7 +48,12 @@ const menuPage = new function() {
     }
 
     const createDessertSection = () => {
-
+        const divDessertSection = document.createElement('div');
+        divDessertSection.classList.add('page-section');
+        divDessertSection.appendChild(createSectionHeader('Desserts'));
+        divDessertSection.appendChild(createDessertCardList());
+        
+        return divDessertSection;
     }
 
     const createBeverageSection = () => {
@@ -73,13 +81,18 @@ const menuPage = new function() {
         const divEntreeCardList = document.createElement('div');
         divEntreeCardList.classList.add('card-list');
         divEntreeCardList.appendChild(createCard('Cheeseburger', 'A classic burger with all the fixings.', cheeseburger, '$9.99'));
-        divEntreeCardList.appendChild(createCard('Pizza', 'A cheese pizza baked in a food fired oven.', pizza, '$11.99'))
+        divEntreeCardList.appendChild(createCard('Pizza', 'A cheese pizza baked in a wood fired oven.', pizza, '$11.99'))
         
         return divEntreeCardList;
     }
 
     const createDessertCardList = () => {
+        const divDessertCardList = document.createElement('div');
+        divDessertCardList.classList.add('card-list');
+        divDessertCardList.appendChild(createCard('Cookies', 'A stack of six delicious double chocolate chip cookies.', cookies, '$7.99'));
+        divDessertCardList.appendChild(createCard('Ice Cream Sundae', 'An ice cream sundae that\'ll be sure to cater to any sweet tooth. Features ice cream, cookies, chocolate sauce, and whipped cream.', iceCream, '$9.99'));
 
+        return divDessertCardList;
     }
 
     const createBeverageCardList = () => {
