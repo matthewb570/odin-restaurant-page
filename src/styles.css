@@ -1,7 +1,9 @@
 /* TODO: Add font */
 
 :root {
-    --cutting-board-image: url(./images/cutting_board.jpg)
+    --cutting-board-image: url(./images/cutting_board.jpg);
+
+    --standard-box-shadow: rgb(156, 156, 156) 1px 1px 5px;
 }
 
 body {
@@ -93,12 +95,54 @@ header nav button {
     margin-bottom: 50px;
 }
 
-#about-container .section-header {
+#about-container .section-header,
+#menu-container .section-header {
     font-size: 2rem;
     margin-bottom: 10px;
     font-weight: 700;
 }
 
 #about-container .section-content {
+    font-size: 1.2rem;
+}
+
+#menu-container {
+    padding: 0px 20px 20px 20px;
+}
+
+.card-list {
+    display: flex;
+    gap: 20px;
+}
+
+.card {
+    box-shadow: var(--standard-box-shadow);
+    width: 400px;
+    border-radius: 10px;
+    padding-bottom: 20px;
+}
+
+.card-image {
+    width: 100%;
+    overflow: hidden;
+    border-radius: 10px 10px 0px 0px;
+}
+
+.card-title {
+    font-size: 1.6rem;
+    font-weight: 700;
+    padding: 20px 20px 0px 20px;
+}
+
+.card-description {
+    padding: 0px 20px 10px 20px;
+    font-size: 1.2rem;
+}
+
+.card-price {
+    display: flex;
+    justify-content: flex-end;
+
+    padding: 0px 20px;
     font-size: 1.2rem;
 }
