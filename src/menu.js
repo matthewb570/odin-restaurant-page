@@ -3,6 +3,8 @@ import cheeseburger from './images/cheeseburger.jpg';
 import pizza from './images/pizza.jpg';
 import cookies from './images/cookies.jpg';
 import iceCream from './images/ice_cream.jpg';
+import water from './images/water.jpg';
+import lemonade from './images/lemonade.jpg';
 
 const menuPage = new function() {
 
@@ -17,6 +19,7 @@ const menuPage = new function() {
         divMenuContainer.appendChild(createAppetizerSection());
         divMenuContainer.appendChild(createEntreeSection());
         divMenuContainer.appendChild(createDessertSection());
+        divMenuContainer.appendChild(createBeverageSection());
 
         return divMenuContainer;
     }
@@ -57,13 +60,17 @@ const menuPage = new function() {
     }
 
     const createBeverageSection = () => {
+        const divBeverageSection = document.createElement('div');
+        divBeverageSection.classList.add('page-section');
+        divBeverageSection.appendChild(createSectionHeader('Beverages'));
+        divBeverageSection.appendChild(createBeverageCardList());
 
+        return divBeverageSection;
     }
 
     const createAppetizerCardList = () => {
         const divAppetizerCardList = document.createElement('div');
         divAppetizerCardList.classList.add('card-list');
-        divAppetizerCardList.appendChild(createCard('Onion Rings', 'The classic, deep-fried favorite.', onionRings, '$5.99'));
         divAppetizerCardList.appendChild(createCard('Onion Rings', 'The classic, deep-fried favorite.', onionRings, '$5.99'));
 
         return divAppetizerCardList;
@@ -96,7 +103,12 @@ const menuPage = new function() {
     }
 
     const createBeverageCardList = () => {
+        const divBeverageCardList = document.createElement('div');
+        divBeverageCardList.classList.add('card-list');
+        divBeverageCardList.appendChild(createCard('Water', 'It\'s wet.', water, 'Free'));
+        divBeverageCardList.appendChild(createCard('Lemonade', 'The classic summer drink.', lemonade, '$1.99'));
 
+        return divBeverageCardList;
     }
 
     const createCard = (title, description, image, price) => {
