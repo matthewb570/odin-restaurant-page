@@ -31,6 +31,10 @@ header .title {
     font-size: 2rem;
 }
 
+button {
+    cursor: pointer;
+}
+
 header nav button {
     border: none;
     background-color: inherit;
